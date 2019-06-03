@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Base36 to Base10 Conversion </title>
+    <meta name="author" content="Shang Liang">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container py-4">
+        <h2 class="text-center">Base36 IDs</h2>
+        <textarea id="base36" rows="5" class="form-control" onkeyup="convert()" onchange="convert()"></textarea>
+        <h2 class="text-center mt-4">Base10 IDs</h2>
+        <textarea id="base10" rows="5" class="form-control"></textarea>
+    </div>
+
+    <script>
+        var mapping = {};
+        for (var i = 0; i < 10; i++) {
+            mapping[i + ''] = i;
+        }
+        for (var i = 0; i < 26; i++) {
+            mapping[String.fromCharCode(97 + i)] = 10 + i;
+        }
+
+        function convert() {
+            var input = document.querySelector('#base36')
+            var output = document.querySelector('#base10')
+            var converted = []
+            var splitter = input.value.indexOf(',') > -1 ? ',' : "\n";
+            for (var line of input.value.split(splitter)) {
+                var value = 0;
+                for (var i = 0; i < line.length; i++) {
+                    value += mapping[line[line.length - i - 1]] * Math.pow(36, i);
+                }
+                converted.push(value);
+            }
+            output.innerHTML = converted.join(splitter);
+        }
+    </script>
+</body>
+
+</html>
