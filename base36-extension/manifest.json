@@ -19,7 +19,7 @@
     "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm+wL5hcnkuBYvVsTri6U4tftbJWUESF2Q1J8uPetMZCv9cY3fCOdwS3ZV8IUvQrl/Vd5JFquBMAWwP3OOP8l8dFOd7jA4Yy6LqZU0ZlW+QLuj3jV+4GCmy4Laak6z6a5L6coSU9j8TEDk2cjaTJtDDKWWqR563TwCuZgMvaFqugeAPEM0y0xDkCXyI4iV1EHWmJ2FHDKWzQnDHjSPPkXqlf4D3UYInD322qkJr+LvLE6VNei3ALFiodk3n86GjpxPja8MzY+srEXTj28xm72rf+EYJ49v4trb188DtTrTP7WaPgzwDKna+7ZZveJ6q8qVK1e54pJ6In7qsc8PNc3HQIDAQAB",
     "manifest_version": 2,
     "name": "B36",
-    "permissions": ["contextMenus", "activeTab", "https://ads-admin.local.twitter.com/tools/adroles/*"],
+    "permissions": ["contextMenus", "https://ads-admin.local.twitter.com/tools/adroles/*"],
     "update_url": "https://clients2.google.com/service/update2/crx",
     "version": "0.0.3"
 }

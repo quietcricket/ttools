@@ -27,17 +27,4 @@ function convert10() {
         values.push(convert10to36(lines[i]));
     }
     field36.value = values.join(separator);
-
 }
-
-chrome.tabs.query({
-    "active": true
-}, function(tabs) {
-
-    if (tabs[0].url && tabs[0].url.indexOf('ads-admin.local.twitter.com') > -1) {
-        var parts = tabs[0].url.split('/');
-        if (parts.length < 7) return;
-        field36.value = parts[6];
-        convert36();
-    }
-});
