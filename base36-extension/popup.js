@@ -1,27 +1,7 @@
 var field36 = document.querySelector('#base36');
 var field10 = document.querySelector('#base10');
-var copyBtn = document.querySelector('#copy_btn');
-
 field36.addEventListener('keyup', convert36);
 field10.addEventListener('keyup', convert10);
-
-copyBtn.addEventListener('click', function(evt) {
-    field10.removeAttribute("disabled");
-    field10.select();
-    document.execCommand('copy');
-    field10.setAttribute("disabled", true);
-    copyBtn.value = '👌';
-    setTimeout(function() {
-        copyBtn.value = 'Copy';
-    }, 3000);
-});
-
-document.querySelector('#contact_btn').addEventListener('click', function() {
-    chrome.tabs.create({
-        'url': 'http://go/people/sliang'
-    });
-    return false;
-});
 
 function convert36() {
     var separator = "\n";

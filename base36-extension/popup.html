@@ -4,20 +4,44 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css">
-    <title>Base36 to Base10 Conversion</title>
+    <style>
+    html {
+        font-size: 22px;
+    }
+
+    body {
+        padding: 0 1em;
+        width: 320px;
+    }
+
+    textarea {
+        font-size: 1em;
+        width: 100%;
+        border: solid 1px gray;
+    }
+
+    small {
+        margin: 1em 0 2em 0;
+        display: block;
+    }
+
+    p {
+        margin-bottom: 3px;
+    }
+
+    </style>
+    <title>Base36 Base10 Conversion</title>
 </head>
 
 <body>
-    <div class="container p-4" style="width: 300px">
-        <p class="mb-0">Base36 IDs</p>
-        <textarea id="base36" rows="5" class="form-control mb-2"></textarea>
-        <p class="mb-0">Base10 IDs</p>
-        <textarea id="base10" rows="5" class="form-control mb-2"></textarea>
-        <div class="py-2">
-            <small>Please <a href="javascript:void(0);" id="contact_btn">Contact Shang</a> for technical issues</small>
-        </div>
-    </div>
+    <p>Base36 Numbers</p>
+    <textarea id="base36" rows="5"></textarea>
+    <p>Base10 Numbers</p>
+    <textarea id="base10" rows="5"></textarea>
+    <small>
+        Separate multiple values by line break or ,<br/>
+        Please contact sliang for technical issues
+    <small>
     <script src="shared.js"></script>
     <script src="popup.js"></script>
 </body>
