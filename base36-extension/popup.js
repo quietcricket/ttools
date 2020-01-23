@@ -33,7 +33,8 @@ function convert10() {
 chrome.tabs.query({
     "active": true
 }, function(tabs) {
-    if (tabs[0].url.indexOf('ads-admin.local.twitter.com') > -1) {
+
+    if (tabs[0].url && tabs[0].url.indexOf('ads-admin.local.twitter.com') > -1) {
         var parts = tabs[0].url.split('/');
         if (parts.length < 7) return;
         field36.value = parts[6];
